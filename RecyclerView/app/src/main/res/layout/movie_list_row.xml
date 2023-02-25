@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/purple_200"
+    >
+
+    <!-- Movie Image -->
+    <ImageView
+        android:id="@+id/ivMovieImage"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:src="@drawable/blackmirror"
+        />
+    <!-- Movie Name -->
+    <TextView
+        android:id="@+id/tvMovieName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/black_mirror"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_toEndOf="@id/ivMovieImage"
+        android:textColor="@color/colorPrimary_Purple"
+        />
+    <!-- Movie Genre -->
+    <TextView
+        android:id="@+id/tvMovieGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/action"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_toEndOf="@id/ivMovieImage"
+        android:layout_below="@id/tvMovieName"
+        />
+    <!-- Movie Year -->
+    <TextView
+        android:id="@+id/tvMovieYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_2011"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_alignParentEnd="true"
+        />
+
+</RelativeLayout>
