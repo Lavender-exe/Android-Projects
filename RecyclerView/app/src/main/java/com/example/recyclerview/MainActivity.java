@@ -32,11 +32,19 @@ public class MainActivity extends AppCompatActivity {
         movieAdapter = new MovieAdapter();
 
         setSampleMovieData();
+        /*
+        Use this setting to improve performance if you know that changes
+        in content do not change the layout size of the RecyclerView
+        */
         recyclerView.setHasFixedSize(true);
+        // Use a linear layout manager
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
+        // Add a default animator
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-//        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+        // Add a divider line between the rows
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+        // Specify an adapter
         recyclerView.setAdapter(movieAdapter);
     }
 
@@ -88,64 +96,88 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setSampleMovieData(){
-        Movie movie = new Movie("Black Mirror",
+        Movie movie = new Movie(
+                "Black Mirror",
                 "Action",
-                2011, "blackmirror");
+                2011,
+                "blackmirror");
         movieList.add(movie);
 //
-        movie = new Movie("Dracula",
+        movie = new Movie(
+                "Dracula",
                 "Horror",
-                1931, "dracula");
+                1931,
+                "dracula");
         movieList.add(movie);
 //
-        movie = new Movie("Glass Onion",
+        movie = new Movie(
+                "Glass Onion",
                 "Comedy",
-                2022, "glassonion");
+                2022,
+                "glassonion");
         movieList.add(movie);
 //
-        movie = new Movie("Hardcore Henry",
+        movie = new Movie(
+                "Hardcore Henry",
                 "Action",
-                2015, "hardcorehenry");
+                2015,
+                "hardcorehenry");
         movieList.add(movie);
 //
-        movie = new Movie("Her",
+        movie = new Movie(
+                "Her",
                 "Romance",
-                2013, "her");
+                2013,
+                "her");
         movieList.add(movie);
 //
-        movie = new Movie("Jurassic Park",
+        movie = new Movie(
+                "Jurassic Park",
                 "Action",
-                1993, "jurassicpark");
+                1993,
+                "jurassicpark");
         movieList.add(movie);
 //
-        movie = new Movie("Midsommar",
+        movie = new Movie(
+                "Midsommar",
                 "Horror",
-                2019, "midsommar");
+                2019,
+                "midsommar");
         movieList.add(movie);
 //
-        movie = new Movie("Nobody",
+        movie = new Movie(
+                "Nobody",
                 "Action",
-                2021, "nobody");
+                2021,
+                "nobody");
         movieList.add(movie);
 //
-        movie = new Movie("Pearl",
+        movie = new Movie(
+                "Pearl",
                 "Horror",
-                2022, "pearl");
+                2022,
+                "pearl");
         movieList.add(movie);
 //
-        movie = new Movie("Pulp Fiction",
+        movie = new Movie(
+                "Pulp Fiction",
                 "Comedy",
-                1994, "pulpfiction");
+                1994,
+                "pulpfiction");
         movieList.add(movie);
 //
-        movie = new Movie("Tesla",
+        movie = new Movie(
+                "Tesla",
                 "Drama",
-                2020, "tesla");
+                2020,
+                "tesla");
         movieList.add(movie);
 //
-        movie = new Movie("The Witcher",
+        movie = new Movie(
+                "The Witcher",
                 "Action",
-                2022, "thewitcher");
+                2022,
+                "thewitcher");
         movieList.add(movie);
 
         movieAdapter.notifyDataSetChanged();

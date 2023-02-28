@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Set to wrap content so the images dont take more space than they need-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="15dp"
     android:background="@color/colorAccent"
     >
@@ -22,7 +23,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_toEndOf="@id/ivMovieImage"
-        android:textColor="@color/colorPrimary_Purple"
+        android:textColor="@color/purple_700"
         />
     <!-- Movie Genre -->
     <TextView
@@ -43,7 +44,8 @@
         android:text="@string/_2011"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/ivMovieImage"
+        android:layout_below="@id/tvMovieGenre"
         />
 
 </RelativeLayout>
