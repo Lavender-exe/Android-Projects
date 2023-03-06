@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Set to wrap content so the images don't take more space than they need-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:background="#DCD0FF"
+    >
+
+    <!-- Book Image -->
+    <ImageView
+        android:id="@+id/ivBookImage"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:src="@drawable/artofhumanhacking"
+        android:contentDescription="@string/book_image" />
+
+    <!-- Book Name -->
+    <TextView
+        android:id="@+id/tvBookName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/art_of_human_hacking"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_toEndOf="@id/ivBookImage"
+        android:textColor="@color/purple_700"
+        />
+
+    <!-- Book Genre -->
+    <TextView
+        android:id="@+id/tvBookGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/security"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_toEndOf="@id/ivBookImage"
+        android:layout_below="@id/tvBookName"
+        />
+
+    <!-- Book Year -->
+    <TextView
+        android:id="@+id/tvBookYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvBookName"
+        android:text="@string/_2010"
+        android:textSize="18sp"
+        android:textColor="@color/teal_700"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

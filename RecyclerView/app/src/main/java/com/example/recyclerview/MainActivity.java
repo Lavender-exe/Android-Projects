@@ -1,6 +1,12 @@
 package com.example.recyclerview;
 
-import static com.example.recyclerview.R.id.recyclerView;
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,18 +15,11 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private List<Movie> movieList = new ArrayList<>();
+    private final List<Movie> movieList = new ArrayList<>();
     private MovieAdapter movieAdapter;
 
     @Override
@@ -59,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             return new MovieViewHolder(itemView);
         }
 
+        @SuppressLint("SetTextI18n")
         @Override
         public void onBindViewHolder(@NonNull MovieViewHolder holder, int position) {
             Movie movie = movieList.get(position);
@@ -66,24 +66,21 @@ public class MainActivity extends AppCompatActivity {
             holder.tvMovieName.setText(movie.getMovieName());
             holder.tvMovieGenre.setText(movie.getMovieGenre());
             holder.tvMovieYear.setText(movie.getMovieYear() + "");
-            int resID = getResources().getIdentifier(movie.getMovieImageName(), "drawable", getPackageName());
+            @SuppressLint("DiscouragedApi") int resID = getResources().getIdentifier(movie.getMovieImageName(), "drawable", getPackageName());
             holder.ivMovieImageName.setImageResource(resID);
         }
 
         @Override
         public int getItemCount() {
-            if (movieList.size() > 0)
-                return movieList.size();
-            else
-                return 0;
+            return movieList.size();
         }
 
         public class MovieViewHolder extends RecyclerView.ViewHolder {
 
-            private TextView tvMovieName;
-            private TextView tvMovieGenre;
-            private TextView tvMovieYear;
-            private ImageView ivMovieImageName;
+            private final TextView tvMovieName;
+            private final TextView tvMovieGenre;
+            private final TextView tvMovieYear;
+            private final ImageView ivMovieImageName;
             public MovieViewHolder(@NonNull View itemView) {
                 super(itemView);
 
@@ -95,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private void setSampleMovieData(){
         Movie movie = new Movie(
                 "Black Mirror",

@@ -13,7 +13,7 @@
         android:layout_width="120dp"
         android:layout_height="140dp"
         android:src="@drawable/blackmirror"
-        />
+        android:contentDescription="Movie Image" />
     <!-- Movie Name -->
     <TextView
         android:id="@+id/tvMovieName"
@@ -42,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/_2011"
-        android:textSize="24sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:layout_toEndOf="@id/ivMovieImage"
         android:layout_below="@id/tvMovieGenre"
