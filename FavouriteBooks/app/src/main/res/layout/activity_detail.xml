@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".DetailActivity">
+
+    <!-- Book Year Details -->
+    <TextView
+        android:id="@+id/tvBookYearDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="@string/book_year"
+        android:textColor="#F3071B"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Book Name Details -->
+    <TextView
+        android:id="@+id/tvBookNameDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/book_name"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Book Genre Detail -->
+    <TextView
+        android:id="@+id/tvBookGenreDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvBookNameDetail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/book_genre"
+        android:textSize="22sp"
+        android:textStyle="bold|italic" />
+
+    <!-- Book Image Detail -->
+    <ImageView
+        android:id="@+id/ivBookImageDetail"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/tvBookGenreDetail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/artofhumanhacking" />
+
+    <!-- Description Family -->
+    <ScrollView
+        android:id="@+id/svBookDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivBookImageDetail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        >
+        <TextView
+            android:id="@+id/tvDescDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:text="@string/dummy_text"
+            android:textSize="16sp" />
+    </ScrollView>
+    <!-- Price for One Label -->
+    <TextView
+        android:id="@+id/tvBookPriceForOneTicketLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/price"
+        android:textColor="#DD0000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+    <!-- Price for One Ticket -->
+    <TextView
+        android:id="@+id/tvBookPriceForOneTicket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/tvBookPriceForOneTicketLabel"
+        android:text="@string/_14_2_omr"
+        android:textColor="#4CAF50"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

@@ -13,4 +13,10 @@
     <string name="_2010">2010</string>
     <string name="security">Security</string>
     <string name="book_image">Book Image</string>
+    <string name="book_name">book_name</string>
+    <string name="book_year">book_year</string>
+    <string name="book_genre">book_genre</string>
+    <string name="dummy_text">lorem ipsum dummy text description</string>
+    <string name="price">Price:</string>
+    <string name="_14_2_omr">14.2 OMR</string>
 </resources>
