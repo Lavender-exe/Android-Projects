@@ -19,4 +19,7 @@
     <string name="dummy_text">lorem ipsum dummy text description</string>
     <string name="price">Price:</string>
     <string name="_14_2_omr">14.2 OMR</string>
+    <string name="sub_total">Sub Total</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="no_of_books">No Of Books</string>
 </resources>

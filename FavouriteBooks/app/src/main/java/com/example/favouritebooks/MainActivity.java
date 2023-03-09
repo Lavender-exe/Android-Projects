@@ -1,6 +1,7 @@
 package com.example.favouritebooks;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,8 +22,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements ItemClickListener {
+    public static final String BOOK_OBJECT = "BookObject";
     private List<Book> bookList = new ArrayList<>();
     private BookAdapter bookAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +56,13 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
 
     @Override
     public void onClick(View view, int position) {
-        Toast.makeText(this, bookList.get(position).getBookName(), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, bookList.get(position).getBookName(), Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, DetailActivity.class);
+        Book book = bookList.get(position);
+
+        intent.putExtra(BOOK_OBJECT, book);
+
+        startActivity(intent);
     }
 
     private class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder> {

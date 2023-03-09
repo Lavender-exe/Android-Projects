@@ -114,8 +114,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/tvSubTotalLabelDetail"
-        android:layout_marginStart="20dp"
-        android:layout_toEndOf="@id/tvNoOfBooksDetail" />
+        android:layout_toEndOf="@id/tvNoOfBooksDetail"
+        android:layout_marginStart="20dp"/>
 
     <!-- Sub Total Label-->
     <TextView
@@ -124,22 +124,23 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/btnAddToCart"
         android:text="@string/sub_total"
-        android:textColor="@color/teal_200"
         android:textSize="24sp"
+        android:textColor="@color/teal_200"
         android:textStyle="bold" />
 
-    <!-- Sub Total Value Detail -->
+    <!-- Sub Total Value -->
     <TextView
-        android:id="@+id/tvBookSubTotalValueDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/btnAddToCart"
-        android:layout_marginStart="40dp"
-        android:layout_toEndOf="@id/tvSubTotalLabelDetail"
-        android:text="@string/_14_2_omr"
-        android:textColor="#4CAF50"
+        android:id="@+id/SubTotalLabel"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="#4CAF50"
+        android:text="@string/_14_2_omr"
+        android:layout_above="@id/btnAddToCart"
+        android:layout_toEndOf="@id/tvSubTotalLabelDetail"
+        android:layout_marginStart="40dp"
+        />
 
 
     <!-- Add to Cart Button -->
